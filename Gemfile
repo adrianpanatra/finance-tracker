@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'devise-bootstrap-views'
 gem "iex-ruby-client" # for stock views
 gem "font-awesome-rails"
+gem 'hirb'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

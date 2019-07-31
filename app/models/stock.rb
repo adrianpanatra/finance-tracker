@@ -2,6 +2,10 @@ class Stock < ApplicationRecord
   has_many :user_stocks
   has_many :users, through: :user_stocks
 
+  def self.find_by_ticker(ticker_symbol)
+    where(ticker: ticker_symbol).first
+  end
+
   def self.new_from_lookup(ticker_symbol)
     begin
       client=IEX::Api::Client.new(publishable_token:'pk_1103f16c821f48d29675ca8842da428c')
